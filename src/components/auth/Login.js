@@ -22,7 +22,7 @@ export const Login = (props) => {
         existingUserCheck()
             .then(exists => {
                 if (exists && exists.password === password.current.value) {
-                    localStorage.setItem("chorez_customer", exists.id)
+                    localStorage.setItem("Chorez_customer", exists.id)
                     props.toggle()
                 } else if (exists && exists.password !== password.current.value) {
                     window.alert("Password does not match")
