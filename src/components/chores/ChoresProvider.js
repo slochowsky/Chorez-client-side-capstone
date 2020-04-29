@@ -7,8 +7,6 @@ export const ChoreContext = React.createContext()
  This component establishes what data can be used.
  */
 export const ChoresProvider = (props) => {
-    // animals = data
-    // setAnimals = function that React created, so we can use it to set state of animals
     const [chores, setChores] = useState([])
 
     const getChores = () => {
@@ -27,11 +25,24 @@ export const ChoresProvider = (props) => {
         })
             .then(getChores)
     }
+    const removeChore = choreId => {
+        return fetch(`http://localhost:8088/chores/${choreId}`, {
+            method: "DELETE"
+        })
+            .then(getChores)
+    }
+    const updateChore = chore => {
+        return fetch(`http://localhost:8088/chores/${chore.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(chore)
+        })
+            .then(getChores)
+    }
+    
 
-    /*
-        Load all animals when the component is initialized. Ensure that
-        an empty array is the second argument to avoid infinite loop.
-    */
     useEffect(
         () => {
             getChores()
@@ -53,7 +64,7 @@ export const ChoresProvider = (props) => {
     return (
         <ChoreContext.Provider value={
             {
-                chores, addChore
+                chores, addChore, removeChore, updateChore
             }
         }>
             {props.children}

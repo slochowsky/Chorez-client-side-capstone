@@ -24,7 +24,10 @@ export default () => {
 
     return (
         <>
-            <h2 className="user_name">{currentUser.map(user => user.name)}'s Chores</h2>
+        <div className="hidden">
+                </div>
+
+            <h3 className="user_name">{currentUser.map(user => user.name)}'s Chores</h3>
 
             <div className="fakeLink href" onClick={toggle}><Button color="success">Add New Chore</Button></div>
         <Modal isOpen={modal} toggle={toggle}>
@@ -39,12 +42,11 @@ export default () => {
             <div className="chores">
                 {
                     usersChores.map(chore => {
-                        console.log(types)
-                        const typeName = types.find(t => t.id === chore.typeId) || {}
-
+                        if (chore.isCompleted === false ) {const typeName = types.find(t => t.id === chore.typeId) || {}
+                        
                         return <Chore key={chore.id}
-                            type={typeName}
-                            chore={chore} />
+                        type={typeName}
+                        chore={chore} />}
                     }
                     )}
             </div>

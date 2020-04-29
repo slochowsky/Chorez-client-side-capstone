@@ -7,8 +7,6 @@ export const TypeContext = React.createContext()
  This component establishes what data can be used.
  */
 export const TypesProvider = (props) => {
-    // animals = data
-    // setAnimals = function that React created, so we can use it to set state of animals
     const [types, setTypes] = useState([])
 
     const getTypes = () => {
@@ -17,10 +15,7 @@ export const TypesProvider = (props) => {
             .then(setTypes)
     }
 
-    /*
-        Load all animals when the component is initialized. Ensure that
-        an empty array is the second argument to avoid infinite loop.
-    */
+
     useEffect(
         () => {
             getTypes()
