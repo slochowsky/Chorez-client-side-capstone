@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
 import { ChoreContext } from "./ChoresProvider"
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap"
+import { Button, Modal, ModalHeader, ModalBody, Card } from "reactstrap"
 import "./Chores.css"
 import { EditChoreForm } from "./EditChoresForm"
 
@@ -27,23 +27,25 @@ export default (props) => {
 
     return (
         <>
-            <section className="chore">
+        <div id="flex-container">
+        <div id="chore-container">   
+            <Card color="info"className="card">
         <h3 className="chore__name">Name: {props.chore.name}</h3>
         <div className="chores__description">Description: {props.chore.description}</div>
         <div className="chores__type">Type: {props.type.name}</div>
-        <div className="chores__completed"></div> Completed: <input type="checkbox" className="" id={ `chore--${props.chore.id}` }
+        <div className="chores__completed">Complete Chore: <input type="checkbox" id={ `chore--${props.chore.id}` }
         onClick={
-        () => {
-            completedChore()
-        }}
-    />
-            
+            () => {
+                completedChore()
+            }}
+            />
+            </div>
 
         <br></br>
         <Button color="danger" onClick={() => {
             removeChore(props.chore.id)
         }}>Delete</Button>
-                <Button color="info" onClick={() => {
+                <Button color="dark" onClick={() => {
                     toggleEdit()
                 }}>Edit</Button>
                 <Modal isOpen={editModal} toggle={toggleEdit}>
@@ -54,7 +56,9 @@ export default (props) => {
                         <EditChoreForm key={props.chore.id} toggleEdit={toggleEdit} chore={props.chore} />
                     </ModalBody>
                 </Modal>
-             </section>
+             </Card>
+                </div>
+                    </div>
         </>
     )
 }

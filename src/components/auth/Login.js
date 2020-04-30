@@ -1,5 +1,9 @@
 import React, { useRef } from "react"
-
+import {
+    Card,
+    CardBody,
+    Button
+  } from "reactstrap";
 
 export const Login = (props) => {
     const email = useRef()
@@ -33,6 +37,10 @@ export const Login = (props) => {
     }
 
     return (
+        <Card>
+            
+      <CardBody>
+
         <div className="container--login">
             <form className="form--login" onSubmit={handleLogin}>
                 <h2>Please sign in</h2>
@@ -53,12 +61,14 @@ export const Login = (props) => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit">
+                    <Button type="submit">
                         Sign in
-                    </button>
+                    </Button>
                 </fieldset>
             </form>
         </div>
+                        </CardBody>
+                        </Card>
     )
 }
 

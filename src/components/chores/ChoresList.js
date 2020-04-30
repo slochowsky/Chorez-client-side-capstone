@@ -24,9 +24,6 @@ export default () => {
 
     return (
         <>
-        <div className="hidden">
-                </div>
-
             <h3 className="user_name">{currentUser.map(user => user.name)}'s Chores</h3>
 
             <div className="fakeLink href" onClick={toggle}><Button color="success">Add New Chore</Button></div>

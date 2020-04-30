@@ -1,16 +1,86 @@
 .chores {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
   
   .chore {
-      flex-basis: 28%;
+      flex-basis: 10%;
       margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
+    }
+  .user_name {
+      text-align: center;
+      padding: 1.3rem;
+    }
+
+
+#flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#chore-container {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+}
+  
+  .container {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    top: 60px;
+    left: calc(50% - 300px);
+    display: flex;
   }
   
-  .hidden  { 
-    display:none; 
-}
+  .card {
+    display: flex;
+    height: 250px;
+    width: 250px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    margin: 10px;
+    padding: 6px;
+  }
+
+  .btn-success {
+    margin: 20px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .card:hover {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+  
+  body {
+    background: url("../../image/cardboard_flat/cardboard_flat.png");
+  }
