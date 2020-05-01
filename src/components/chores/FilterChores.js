@@ -1,25 +1,16 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, { useContext, useRef } from 'react'
 import { TypeContext } from '../types/TypeProvider'
 import { ChoreContext } from './ChoresProvider'
+
 
 export const FilterByType = () => {
 
     const { types } = useContext(TypeContext)
-    const { chore } = useContext(ChoreContext)
+    // const { chore } = useContext(ChoreContext)
     const type = useRef()
 
-    const [ updatedChore, setChore ] = useState(chore)
-
-    const handleControlledInputChange = (event) => {
-        // Create a new copy of the animal being edited
-        const newChore = Object.assign({}, updatedChore)
-
-        // Change the property value on the copy
-        newChore[event.target.name] = event.target.value
-
-        // Set the copy as the new state
-        setChore(newChore)
-    }
+    // const [ updatedChore, setChore ] = useState(chore)
+    const { setFilterTerm } = useContext(ChoreContext)
 
     return (
         <div className="filterTypes">
@@ -28,8 +19,8 @@ export const FilterByType = () => {
                 name="type"
                 ref={type}
                 id="choreType"
+                onChange={e => setFilterTerm(parseInt(type.current.value))}
                 className="form-control">
-                onChange={handleControlledInputChange}
                 <option value="0">Select a type</option>
                 {types.map(e => (
                     <option key={e.id} value={e.id}>

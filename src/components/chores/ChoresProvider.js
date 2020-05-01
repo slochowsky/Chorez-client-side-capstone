@@ -8,6 +8,7 @@ export const ChoreContext = React.createContext()
  */
 export const ChoresProvider = (props) => {
     const [chores, setChores] = useState([])
+    const [filterTerm, setFilterTerm] = useState("")
 
     const getChores = () => {
         return fetch("http://localhost:8088/chores")
@@ -64,7 +65,7 @@ export const ChoresProvider = (props) => {
     return (
         <ChoreContext.Provider value={
             {
-                chores, addChore, removeChore, updateChore
+                chores, addChore, removeChore, updateChore, setFilterTerm, filterTerm
             }
         }>
             {props.children}

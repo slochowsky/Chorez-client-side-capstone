@@ -16,7 +16,7 @@ export default (props) => {
                 <TypesProvider>
                     <ChoresProvider>
                         <FilterByType/>
-                        <ChoresList FilterByType={FilterByType}/>
+                        <ChoresList/>
                     </ChoresProvider>
                 </TypesProvider>
             </UsersProvider>
