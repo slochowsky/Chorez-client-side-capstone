@@ -39,7 +39,7 @@ export default () => {
         <>
             <h3 className="user_name">{currentUser.map(user => user.name)}'s Chores</h3>
 
-            <div className="fakeLink href" onClick={toggle}><Button color="success">Add New Chore</Button></div>
+            <div className="fakeLink href" onClick={toggle}><button className="add_button"color="success">Add New Chore</button></div>
         <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>
                     Add Chore

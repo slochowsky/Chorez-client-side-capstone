@@ -50,9 +50,9 @@ export const Register = (props) => {
     }
 
     return (
-        <div className="container--login">
+        <div id="register">
             <form className="form--register" onSubmit={handleRegister}>
-                <h4 className="darkgray">If you are not a customer yet, please register a new account</h4>
+                <h3 className="darkgray">Register a new account</h3>
                 <fieldset>
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text"

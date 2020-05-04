@@ -29,8 +29,8 @@ export default (props) => {
         <>
         <div id="flex-container">
         <div id="chore-container">   
-            <Card color="info"className="card">
-        <h3 className="chore__name">Name: {props.chore.name}</h3>
+            <section color="info"className="card">
+        <p className="chore__name">Name: {props.chore.name}</p>
         <div className="chores__description">Description: {props.chore.description}</div>
         <div className="chores__type">Type: {props.type.name}</div>
         <div className="chores__completed">Complete Chore: <input type="checkbox" id={ `chore--${props.chore.id}` }
@@ -42,12 +42,12 @@ export default (props) => {
             </div>
 
         <br></br>
-        <Button color="danger" onClick={() => {
+        <button className="edit_button" color="dark" onClick={() => {
+            toggleEdit()
+        }}>Edit</button>
+        <button className="delete_button" color="danger" onClick={() => {
             removeChore(props.chore.id)
-        }}>Delete</Button>
-                <Button color="dark" onClick={() => {
-                    toggleEdit()
-                }}>Edit</Button>
+        }}>Delete</button>
                 <Modal isOpen={editModal} toggle={toggleEdit}>
                     <ModalHeader toggle={toggleEdit}>
                         {props.chore.name}
@@ -56,7 +56,7 @@ export default (props) => {
                         <EditChoreForm key={props.chore.id} toggleEdit={toggleEdit} chore={props.chore} />
                     </ModalBody>
                 </Modal>
-             </Card>
+             </section>
                 </div>
                     </div>
         </>

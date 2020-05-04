@@ -1,6 +1,10 @@
-.chores {
+ .chores {
     display: flex;
     flex-wrap: wrap;
+  }
+  .chore__name {
+    font-size: 18px;
+    /* font-family: ; */
   }
   
   .chore {
@@ -12,49 +16,35 @@
       padding: 1.3rem;
     }
 
-
-#flex-container {
+    .container {
+      position: absolute;
+      height: 300px;
+      width: 600px;
+      top: 60px;
+      left: calc(50% - 300px);
+      display: flex;
+    }
+    
+.card {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#chore-container {
-  margin-left: 50px;
-  display: flex;
-  flex-direction: row;
-}
-  
-  .container {
-    position: absolute;
-    height: 300px;
-    width: 600px;
-    top: 60px;
-    left: calc(50% - 300px);
-    display: flex;
-  }
-  
-  .card {
-    display: flex;
-    height: 250px;
-    width: 250px;
-    background-color: #17141d;
-    border-radius: 10px;
-    box-shadow: -1rem 0 3rem #000;
-    transition: 0.4s ease-out;
+  height: 280px;
+  width: 250px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
     position: relative;
     left: 0px;
-    margin: 10px;
-    padding: 6px;
+    margin: 30px;
+    padding: 12px;
   }
-
+  
   .btn-success {
-    margin: 20px;
+    margin: 2px;
   }
   
   .card:not(:first-child) {
-      margin-left: -50px;
+    margin-left: -50px;
   }
   
   .card:hover {
@@ -81,6 +71,99 @@
     transition: 0.6s ease-out;
   }
   
-  body {
-    background: url("../../image/cardboard_flat/cardboard_flat.png");
+  #chore-container {
+    margin-left: 120px;
+    margin-bottom: 65px;
+    display: flex;
+    flex-direction: row;
+  }
+        #flex-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+      .card:before, .card:after {
+          content: " ";
+          display: block;
+          background: rgba(0,0,0,0.1);
+          width: 100px;
+          height: 30px;
+        }
+        .card:before {
+          margin-top: -17px;
+          margin-left: -54px;
+          -webkit-transform: rotate(-25deg);
+          -moz-transform: rotate(-25deg);
+          -o-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+        }
+        .card:after {
+          margin-top: -242px;
+          margin-left: 180px;
+          -webkit-transform: rotate(32deg);
+          -moz-transform: rotate(32deg);
+          -o-transform: rotate(32deg);
+          transform: rotate(32deg);
+        }
+
+.add_button {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #60a3bc;
+padding: 20px;
+border-radius: 50px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+
+.add_button:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+.delete_button {
+  border: none;
+  background: #60a3bc;
+  color: white !important;
+  font-weight: 100;
+  padding: 7px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  }
+  .delete_button:hover {
+  color:red !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
+  }
+.edit_button {
+  border: none;
+  background: #60a3bc;
+  color: white !important;
+  font-weight: 100;
+  padding: 7px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  }
+  .edit_button:hover {
+  color:gray !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
   }
