@@ -37,10 +37,6 @@ export const Login = (props) => {
     }
 
     return (
-        <Card>
-            
-      <CardBody>
-
         <div className="container--login">
             <form className="form--login" onSubmit={handleLogin}>
                 <h2>Please sign in</h2>
@@ -61,14 +57,12 @@ export const Login = (props) => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <Button type="submit">
+                    <button type="submit">
                         Sign in
-                    </Button>
+                    </button>
                 </fieldset>
             </form>
         </div>
-                        </CardBody>
-                        </Card>
     )
 }
 

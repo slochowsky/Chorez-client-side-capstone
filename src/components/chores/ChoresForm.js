@@ -5,7 +5,6 @@ import { TypeContext } from "../types/TypeProvider"
 export default props => {
     const { addChore } = useContext(ChoreContext)
     const { types } = useContext(TypeContext)
-    const { setFilterTerm } = useContext(ChoreContext)
 
 
     const name = useRef()
@@ -82,7 +81,7 @@ export default props => {
                 onClick={
                     evt => {
                         evt.preventDefault() // Prevent browser from submitting the form
-                        constructNewChore(setFilterTerm(parseInt(type.current.value)))
+                        constructNewChore((parseInt(type.current.value)))
                     }
                 }
                 className="btn btn-primary">

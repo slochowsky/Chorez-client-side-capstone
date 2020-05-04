@@ -21,7 +21,7 @@ export const FilterByType = () => {
                 id="choreType"
                 onChange={e => setFilterTerm(parseInt(type.current.value))}
                 className="form-control">
-                <option value="0">Select a type</option>
+                <option value="0">Show All Chores</option>
                 {types.map(e => (
                     <option key={e.id} value={e.id}>
                         {e.name}

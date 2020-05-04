@@ -33,7 +33,7 @@ export default () => {
     }, [chores, filterTerm])
     useEffect(() => {
         setFilteredChores(usersChores)
-    }, [])
+    }, [users])
 
     return (
         <>
