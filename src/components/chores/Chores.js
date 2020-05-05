@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
 import { ChoreContext } from "./ChoresProvider"
-import { Button, Modal, ModalHeader, ModalBody, Card } from "reactstrap"
+import { Modal, ModalHeader, ModalBody } from "reactstrap"
 import "./Chores.css"
 import { EditChoreForm } from "./EditChoresForm"
 

@@ -8,7 +8,7 @@ export const ChoreContext = React.createContext()
  */
 export const ChoresProvider = (props) => {
     const [chores, setChores] = useState([])
-    const [filterTerm, setFilterTerm] = useState("")
+    const [filterTerm, setFilterTerm] = useState(0)
 
     const getChores = () => {
         return fetch("http://localhost:8088/chores")
@@ -51,9 +51,7 @@ export const ChoresProvider = (props) => {
         []
     )
 
-    /*
-        Watching the state of chores, console.logs when the state has changed
-    */
+
     useEffect(
         () => {
             console.log("**** CHORES APPLICATION STATE CHANGED  ****")

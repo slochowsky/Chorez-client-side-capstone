@@ -6,11 +6,9 @@ import { ChoreContext } from './ChoresProvider'
 export const FilterByType = () => {
 
     const { types } = useContext(TypeContext)
-    // const { chore } = useContext(ChoreContext)
-    const type = useRef()
-
-    // const [ updatedChore, setChore ] = useState(chore)
     const { setFilterTerm } = useContext(ChoreContext)
+
+    const type = useRef()
 
     return (
         <div className="filterTypes">

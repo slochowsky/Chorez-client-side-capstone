@@ -3,7 +3,7 @@ import { ChoreContext } from "./ChoresProvider"
 import Chore from "./Chores"
 import { TypeContext } from "../types/TypeProvider"
 import { UsersContext } from "../users/UserProvider"
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap"
+import { Modal, ModalHeader, ModalBody } from "reactstrap"
 import ChoresForm from "./ChoresForm"
 
 
@@ -18,12 +18,14 @@ export default () => {
     
     const [modal, setModal] = useState(false)
     const toggle = () => setModal(!modal)
-
-
+    
+    
     const userId = localStorage.getItem("Chorez_customer");
     const currentUser = users.filter(user => user.id === parseInt(userId));
     const usersChores = chores.filter(chore => chore.userId === parseInt(userId, 10));
     
+    // When the user performs an action, and this component needs to do something in response to that action,
+    // I use the Effect hook to define those responses.
     useEffect(() => {
         if (filterTerm !== 0) {
         const subset = chores.filter(c => c.typeId === filterTerm)
@@ -33,7 +35,7 @@ export default () => {
     }, [chores, filterTerm])
     useEffect(() => {
         setFilteredChores(usersChores)
-    }, [users])
+    }, [])
 
     return (
         <>

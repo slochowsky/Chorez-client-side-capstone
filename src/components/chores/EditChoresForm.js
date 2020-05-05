@@ -8,13 +8,8 @@ export const EditChoreForm = ({ chore, toggleEdit }) => {
     const { types } = useContext(TypeContext)
     const { updateChore } = useContext(ChoreContext)
 
-    // Separate state variable to track the Employee as it is edited
     const [ updatedChore, setChore ] = useState(chore)
 
-    /*
-        When changing a state object or array, always create a new one
-        and change state instead of modifying current one
-    */
     const handleControlledInputChange = (event) => {
         const newChore = Object.assign({}, updatedChore)
         newChore[event.target.name] = event.target.value
