@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import { ChoresProvider } from "./chores/ChoresProvider"
 import { TypesProvider } from "./types/TypeProvider"
 import ChoresList from "./chores/ChoresList"
@@ -9,6 +9,7 @@ import { FilterByType } from "./chores/FilterChores"
 
 
 export default (props) => {
+
     return (
         <>
             <h1>Chorez</h1>

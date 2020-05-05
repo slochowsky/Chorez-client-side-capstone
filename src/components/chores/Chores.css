@@ -1,11 +1,24 @@
+ 
  .chores {
     display: flex;
     flex-wrap: wrap;
+    font-family: cursive;
+    font-size: 16px;
   }
   .chore__name {
-    font-size: 18px;
-    /* font-family: ; */
+    font-size: 21px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
   }
+
+#choreType {
+  max-width: 200px;
+  background-color: #60a3bc;
+  margin-left: 899px;
+}
+
+.chore-container {
+  background-color: rgb(156, 156, 156);
+}
   
   .chore {
       flex-basis: 10%;
@@ -100,7 +113,7 @@
           transform: rotate(-25deg);
         }
         .card:after {
-          margin-top: -242px;
+          margin-top: -255px;
           margin-left: 180px;
           -webkit-transform: rotate(32deg);
           -moz-transform: rotate(32deg);
@@ -140,8 +153,8 @@ transition: all 0.4s ease 0s;
   }
   .delete_button:hover {
   color:red !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
+  font-weight: 800 !important;
+  letter-spacing: 7px;
   background: none;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -153,6 +166,7 @@ transition: all 0.4s ease 0s;
   color: white !important;
   font-weight: 100;
   padding: 7px;
+  margin: 4px;
   text-transform: uppercase;
   border-radius: 6px;
   display: inline-block;

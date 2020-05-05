@@ -1,6 +1,8 @@
 import React, { useContext, useRef } from 'react'
 import { TypeContext } from '../types/TypeProvider'
 import { ChoreContext } from './ChoresProvider'
+import "./Chores.css"
+
 
 
 export const FilterByType = () => {
@@ -12,7 +14,6 @@ export const FilterByType = () => {
 
     return (
         <div className="filterTypes">
-            <label htmlFor="type">Filter By Type: </label>
             <select defaultValue=""
                 name="type"
                 ref={type}

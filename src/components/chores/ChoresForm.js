@@ -65,7 +65,7 @@ export default props => {
                         defaultValue=""
                         name="type"
                         ref={type}
-                        id="choreType"
+                        id="type"
                         className="form-control"
                     >
                         <option value="0">Select a type</option>
