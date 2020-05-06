@@ -33,7 +33,7 @@ export default (props) => {
         <p className="chore__name">Name: {props.chore.name}</p>
         <div className="chores__description">Description: {props.chore.description}</div>
         <div className="chores__type">Type: {props.type.name}</div>
-        <div className="chores__completed">Complete Chore: <input type="checkbox" id={ `chore--${props.chore.id}` }
+        <div className="chores__completed">Complete Chore: <input type="checkbox" id={ `chore--${props.chore.id}`}
         onClick={
             () => {
                 completedChore()

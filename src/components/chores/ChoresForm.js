@@ -6,7 +6,8 @@ export default props => {
     const { addChore } = useContext(ChoreContext)
     const { types } = useContext(TypeContext)
 
-
+// useRef is reacts way of saying i need to get something from the dom, 
+// reference to an element on the dom
     const name = useRef()
     const description= useRef()
     const type = useRef()

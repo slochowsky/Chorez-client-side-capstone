@@ -7,13 +7,13 @@ import { Modal, ModalHeader, ModalBody } from "reactstrap"
 import ChoresForm from "./ChoresForm"
 
 
-
-
 export default () => {
+    // provider functions that can be accessed
     const { chores, filterTerm } = useContext(ChoreContext)
     const { types } = useContext(TypeContext)
     const { users } = useContext(UsersContext)
     
+    // where these funtions live
     const [ filteredChores, setFilteredChores ] = useState([])
     
     const [modal, setModal] = useState(false)

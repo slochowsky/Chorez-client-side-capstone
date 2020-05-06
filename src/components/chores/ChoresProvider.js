@@ -7,7 +7,9 @@ export const ChoreContext = React.createContext()
  This component establishes what data can be used.
  */
 export const ChoresProvider = (props) => {
+    // anytime setChores is ran it updates chores varible.
     const [chores, setChores] = useState([])
+    // on page load set chores to empty array at first.
     const [filterTerm, setFilterTerm] = useState(0)
 
     const getChores = () => {
@@ -43,7 +45,7 @@ export const ChoresProvider = (props) => {
             .then(getChores)
     }
     
-
+// infinite loop if not set to empty array
     useEffect(
         () => {
             getChores()
@@ -51,7 +53,7 @@ export const ChoresProvider = (props) => {
         []
     )
 
-
+// first hook runs on page load and get all chores, and the second hook we want to use whenever chores varible changes.
     useEffect(
         () => {
             console.log("**** CHORES APPLICATION STATE CHANGED  ****")
