@@ -39,7 +39,9 @@ export default () => {
 
     return (
         <>
+        <div className="userNameContainer">
             <h3 className="user_name">{currentUser.map(user => user.name)}'s Chores</h3>
+        </div>
 
             <div className="fakeLink href" onClick={toggle}><button className="add_button"color="success">Add New Chore</button></div>
         <Modal isOpen={modal} toggle={toggle}>

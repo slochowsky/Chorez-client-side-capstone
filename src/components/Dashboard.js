@@ -9,15 +9,15 @@ import { NavLink, Button } from "reactstrap"
 
 
 
-
 export default ( {logout} ) => {
 
     return (
         <>
-    
-            <Button>
+        <header>
+            <Button className="logout" color="secondary">
             <NavLink onClick={logout}>Logout</NavLink>
             </Button>
+        </header>
             <h1>Chorez</h1>
             <UsersProvider>
                 <TypesProvider>
