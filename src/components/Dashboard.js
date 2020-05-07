@@ -14,7 +14,7 @@ export default ( {logout} ) => {
 
     return (
         <>
-        
+    
             <Button>
             <NavLink onClick={logout}>Logout</NavLink>
             </Button>
