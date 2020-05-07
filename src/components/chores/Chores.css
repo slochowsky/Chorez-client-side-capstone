@@ -1,12 +1,12 @@
- 
- 
- .chores {
+
+
+.chores {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
     font-size: 16px;
   }
-  .chore__name {
+.chore__name {
     font-size: 21px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
   }
@@ -21,11 +21,11 @@
   background-color: rgb(156, 156, 156);
 }
   
-  .chore {
+.chore {
       flex-basis: 10%;
       margin: 1em;
     }
-  .user_name {
+.user_name {
       text-align: center;
       padding: 1.3rem;
     }

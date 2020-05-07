@@ -12,6 +12,9 @@ export default (props) => {
 
     return (
         <>
+        {/* <div className="logo">
+            <img className="mainLogo" src={`image/Chorezz(4).png`} />
+        </div> */}
             <h1>Chorez</h1>
             <UsersProvider>
                 <TypesProvider>
