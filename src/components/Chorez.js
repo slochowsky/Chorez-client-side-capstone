@@ -6,7 +6,12 @@ export default () => {
     const [check, update] = useState(false)
     const toggle = () => update(!check)
 
+    const logout = () => {
+        localStorage.removeItem("Chorez_customer")
+        toggle()
+    }
+
     return (
-        localStorage.getItem("Chorez_customer") ? <Dashboard /> : <Auth toggle={toggle} />
+        localStorage.getItem("Chorez_customer") ? <Dashboard logout={logout}/> : <Auth toggle={toggle} />
     )
 }

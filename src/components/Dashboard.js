@@ -5,16 +5,19 @@ import ChoresList from "./chores/ChoresList"
 import { UsersProvider } from "./users/UserProvider"
 import "./Chorez.css"
 import { FilterByType } from "./chores/FilterChores"
+import { NavLink, Button } from "reactstrap"
 
 
 
-export default (props) => {
+
+export default ( {logout} ) => {
 
     return (
         <>
-        {/* <div className="logo">
-            <img className="mainLogo" src={`image/Chorezz(4).png`} />
-        </div> */}
+        
+            <Button>
+            <NavLink onClick={logout}>Logout</NavLink>
+            </Button>
             <h1>Chorez</h1>
             <UsersProvider>
                 <TypesProvider>
