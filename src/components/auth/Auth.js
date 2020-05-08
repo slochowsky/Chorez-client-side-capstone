@@ -11,7 +11,7 @@ export const Auth = ({toggle}) => {
     return (
         <>
             <h1 className="welcome">Welcome to Chorez</h1>
-<img src={Logo}></img>
+            <img src={Logo}></img>
             <div className="authContainer">
                 <Login toggle={toggle} />
                 <Register toggle={toggle} />

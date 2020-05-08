@@ -1,12 +1,13 @@
 header {
   background-color:  #60a3bc;
   padding-bottom: 5px;
+  height: 66px;
 }
 
 .logout {
-  margin-top: 7px;
+  margin-top: -150px;
   margin-right: 25px;
-  margin-left: 1010px;
+  margin-left: 1220px;
 }
 
 .chores {

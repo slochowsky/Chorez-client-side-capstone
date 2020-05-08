@@ -6,6 +6,8 @@ import { UsersProvider } from "./users/UserProvider"
 import "./Chorez.css"
 import { FilterByType } from "./chores/FilterChores"
 import { NavLink, Button } from "reactstrap"
+import Logo from "../image/Chorezz (4).png"
+
 
 
 
@@ -14,6 +16,7 @@ export default ( {logout} ) => {
     return (
         <>
         <header>
+        <img className="logo2" src={Logo}></img>
             <Button className="logout" color="secondary">
             <NavLink onClick={logout}>Logout</NavLink>
             </Button>
